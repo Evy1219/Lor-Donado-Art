@@ -209,6 +209,89 @@
       justify-content: center;
     }
 
+    .site-section {
+      width: 100%;
+      margin-top: 5rem;
+      padding: 2.5rem clamp(1.2rem, 5vw, 3.5rem);
+      background: rgba(248, 244, 242, 0.32);
+      border-top: 1px solid rgba(28, 28, 28, 0.2);
+    }
+
+    .section-heading {
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 600;
+    }
+
+    .section-heading p {
+      margin: 0.35rem auto 0;
+      max-width: 480px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .contact-content,
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-card,
+    .price-card {
+      padding: 1.4rem;
+      background: rgba(248, 244, 242, 0.7);
+      border: 1px solid rgba(28, 28, 28, 0.18);
+    }
+
+    .contact-card h3,
+    .price-card h3 {
+      margin-bottom: 0.45rem;
+      font-family: 'Caveat', cursive;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .contact-card p,
+    .price-card p,
+    .price-card li {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .contact-card a {
+      display: inline-block;
+      margin-top: 0.7rem;
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .price-card strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: 'Caveat', cursive;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .price-card ul {
+      margin: 0.7rem 0 0;
+      padding-left: 1.1rem;
+    }
+
     .dot {
       width: 7px;
       height: 7px;
@@ -274,6 +357,10 @@
       .gallery-wrapper {
         gap: 0.5rem;
       }
+      .contact-content,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
       .arrow {
         font-size: 1.85rem;
         padding: 0.35rem 0.45rem;
@@ -334,6 +421,46 @@
     </div>
 
     <div class="dots" id="dots"></div>
+
+    <section class="site-section" id="contact">
+      <div class="section-heading">
+        <h2>Contact</h2>
+        <p>For studio visits, commissions, exhibitions, and thoughtful questions about the work.</p>
+      </div>
+      <div class="contact-content">
+        <article class="contact-card">
+          <h3>Say hello</h3>
+          <p>Send a note and include a little about what you have in mind. I usually reply within a few days.</p>
+          <a href="mailto:hello@lordonado.art">hello@lordonado.art</a>
+        </article>
+        <article class="contact-card">
+          <h3>Follow the work</h3>
+          <p>New paintings, works in progress, and studio notes are shared occasionally online.</p>
+          <a href="#gallery">Return to the gallery</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="site-section" id="pricing">
+      <div class="section-heading">
+        <h2>Pricing</h2>
+        <p>Artwork prices vary by size, materials, and the time held in each piece.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3>Works on paper</h3>
+          <strong>From $180</strong>
+          <p>Small studies and finished drawings on archival paper.</p>
+          <ul><li>Signed and dated</li><li>Unframed for flexible shipping</li></ul>
+        </article>
+        <article class="price-card">
+          <h3>Paintings</h3>
+          <strong>From $650</strong>
+          <p>Original oil and mixed-media works, available framed or unframed.</p>
+          <ul><li>Certificate of authenticity</li><li>Shipping quoted separately</li></ul>
+        </article>
+      </div>
+    </section>
   </main>
 
   <div class="corner-icon" title="Contact / QR" onclick="alert('Link this to Instagram, email, or a QR code')">
