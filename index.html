@@ -16,6 +16,8 @@
       --text-muted: #3a3a3a;
       --white: #f8f4f2;
       --accent: #2a2a2a;
+      --pink-pale: #f4d7df;
+      --pink-deep: #a95f79;
     }
 
     * {
@@ -26,7 +28,7 @@
 
     body {
       min-height: 100vh;
-      background: var(--bg);
+      background: radial-gradient(circle at 8% 4%, rgba(248, 220, 228, .8) 0 11%, transparent 31%), radial-gradient(circle at 94% 80%, rgba(92, 45, 63, .22), transparent 34%), linear-gradient(135deg, #c48a9e 0%, #d5a1b1 48%, #b97490 100%);
       font-family: 'Patrick Hand', 'Caveat', cursive;
       color: var(--text);
       line-height: 1.5;
@@ -127,6 +129,9 @@
       align-items: center;
       justify-content: center;
       gap: 1.2rem;
+      padding: 1.1rem 0;
+      border-radius: 18px;
+      background: rgba(248, 244, 242, .16);
     }
 
     .arrow {
@@ -156,7 +161,7 @@
       aspect-ratio: 1 / 1;
       background: var(--frame);
       border: 3px solid var(--white);
-      border-radius: 4px;
+      border-radius: 14px;
       overflow: hidden;
       box-shadow: 
         0 12px 32px rgba(0, 0, 0, 0.18),
@@ -176,13 +181,27 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: var(--frame);
-      color: #111;
+      background: #30282d;
+      color: var(--white);
       text-align: center;
       padding: 1.8rem;
       font-size: clamp(1.3rem, 3.8vw, 1.65rem);
       font-weight: 600;
       line-height: 1.3;
+    }
+
+    .slide:nth-child(2),
+    .slide:nth-child(4),
+    .slide:nth-child(6) {
+      background: var(--pink-pale);
+      color: var(--text);
+    }
+
+    .slide.empty-frame {
+      background: repeating-linear-gradient(135deg, rgba(248, 244, 242, .08) 0 2px, transparent 2px 9px), #242024;
+      color: #f0c8d3;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .slide small {
@@ -327,6 +346,8 @@
             Still Life with Shadow
             <small>Mixed media · 2025</small>
           </div>
+          <div class="slide empty-frame" aria-label="Empty artwork frame">Empty</div>
+          <div class="slide empty-frame" aria-label="Empty artwork frame">Empty</div>
         </div>
       </div>
 
