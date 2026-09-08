@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Lor Donado Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #c48a9e; --text: #1c1c1c; --text-muted: #3a3a3a; --white: #f8f4f2; --accent: #2a2a2a; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; background: var(--bg); color: var(--text); font-family: 'Patrick Hand', 'Caveat', cursive; line-height: 1.5; }
+    header { width: 100%; padding: 2.8rem 1.5rem 1.5rem; text-align: center; }
+    .logo { margin-bottom: 1.6rem; color: var(--text); font-family: 'Caveat', cursive; font-size: clamp(2.6rem, 7vw, 3.8rem); font-weight: 600; letter-spacing: .5px; }
+    nav { display: flex; justify-content: center; align-items: center; gap: 1.6rem; flex-wrap: wrap; font-size: clamp(1.35rem, 3.2vw, 1.65rem); }
+    nav a { position: relative; color: var(--text); text-decoration: none; transition: opacity .25s ease; }
+    nav a::after { content: ''; position: absolute; left: 0; bottom: -3px; width: 0; height: 1.5px; background: var(--text); transition: width .3s ease; }
+    nav a:hover { opacity: .7; } nav a:hover::after { width: 100%; } nav .divider { opacity: .45; user-select: none; }
+    main { max-width: 900px; min-height: 58vh; margin: 0 auto; padding: 3rem 1.5rem 5rem; display: flex; flex-direction: column; align-items: center; }
+    .site-section { width: 100%; padding: 2.5rem clamp(1.2rem, 5vw, 3.5rem); background: rgba(248, 244, 242, .32); border-top: 1px solid rgba(28, 28, 28, .2); }
+    .section-heading { margin-bottom: 1.6rem; text-align: center; } .section-heading h1 { margin: 0; font-family: 'Caveat', cursive; font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 600; }
+    .section-heading p { max-width: 480px; margin: .35rem auto 0; color: var(--text-muted); font-family: 'Inter', system-ui, sans-serif; font-size: .9rem; line-height: 1.6; }
+    .contact-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 680px; margin: 0 auto; }
+    .contact-card { padding: 1.4rem; background: rgba(248, 244, 242, .7); border: 1px solid rgba(28, 28, 28, .18); }
+    .contact-card h2 { margin: 0 0 .45rem; font-family: 'Caveat', cursive; font-size: 1.8rem; font-weight: 600; } .contact-card p { color: var(--text-muted); font-family: 'Inter', system-ui, sans-serif; font-size: .82rem; line-height: 1.6; }
+    .contact-card a { display: inline-block; margin-top: .7rem; color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: .82rem; font-weight: 500; }
+    footer { padding: 2rem 1rem 3.5rem; color: rgba(28, 28, 28, .55); font-family: 'Inter', system-ui, sans-serif; font-size: .78rem; text-align: center; }
+    @media (max-width: 520px) { header { padding-top: 2.2rem; } main { padding-top: 2rem; } .contact-content { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Lor Donado Art</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Gallery</a><span class="divider">|</span><a href="contact.html" aria-current="page">Contact</a><span class="divider">|</span><a href="pricing.html">Pricing</a>
+    </nav>
+  </header>
+  <main>
+    <section class="site-section">
+      <div class="section-heading"><h1>Contact</h1><p>For studio visits, commissions, exhibitions, and thoughtful questions about the work.</p></div>
+      <div class="contact-content">
+        <article class="contact-card"><h2>Say hello</h2><p>Send a note and include a little about what you have in mind. I usually reply within a few days.</p><a href="mailto:hello@lordonado.art">hello@lordonado.art</a></article>
+        <article class="contact-card"><h2>Follow the work</h2><p>New paintings, works in progress, and studio notes are shared occasionally online.</p><a href="index.html">Return to the gallery</a></article>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 Lor Donado · All rights reserved</footer>
+</body>
+</html>
